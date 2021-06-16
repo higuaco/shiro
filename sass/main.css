@@ -1,5 +1,5 @@
 /* * * * * * * * *
-*	base
+* base
 * * * * * * * * */
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -8,31 +8,45 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: poppins, sans-serif;
   font-size: 16px;
   color: #2b2b2b;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #2b2b2b;
+  text-decoration: none;
 }
 
 section {
   text-align: center;
 }
 
-h1, ul, p {
+tbody {
+  vertical-align: inherit;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0;
+}
+
+ul {
   margin: 0;
   padding: 0;
 }
 
 li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #2b2b2b;
+  list-style-type: none;
 }
 
 /* * * * * * * * *
-*	utility
+* utility
 * * * * * * * * */
 .u-content-wrapper {
   max-width: 960px;
@@ -66,18 +80,18 @@ a {
 }
 
 /* * * * * * * * *
-*	header
+* header
 * * * * * * * * */
-header {
+.header {
   position: relative;
   width: 100%;
   height: 620px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/header.png);
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/header.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../img/header.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/header.png");
   background-size: cover;
   text-align: center;
   color: #fff;
-  font-family: sans-serif;
+  font-family: myriad-pro, sans-serif;
 }
 
 .header__nav {
@@ -114,9 +128,6 @@ header {
           align-items: center;
 }
 
-/* * * * * * * * *
-*	hamburger menu
-* * * * * * * * */
 .header__nav__logo {
   font-size: 36px;
 }
@@ -134,10 +145,10 @@ header {
 .hamburger-menu__line--dummy {
   position: absolute;
   left: 0;
+  display: block;
   width: 32px;
   height: 1px;
   background: #fff;
-  display: block;
 }
 
 .color-chnage span,
@@ -190,9 +201,6 @@ header {
   opacity: 0;
 }
 
-/* * * * * * * * *
-*	header menu
-* * * * * * * * */
 .header-menu {
   position: absolute;
   top: 64px;
@@ -216,7 +224,7 @@ header {
   transition: all .3s;
 }
 
-.header-menu__item {
+.header__menu__item {
   padding: 0;
   line-height: 11vh;
   text-align: center;
@@ -224,7 +232,7 @@ header {
   border-top: 1px solid #ccc;
 }
 
-.header-menu__item:last-of-type {
+.header__menu__item:last-of-type {
   border-bottom: 1px solid #ccc;
 }
 
@@ -232,9 +240,6 @@ header {
   height: calc(100vh - 64px);
 }
 
-/* * * * * * * * *
-*	header__title
-* * * * * * * * */
 .header__title {
   padding-top: 240px;
   font-size: 120px;
@@ -257,7 +262,7 @@ header {
 }
 
 /* * * * * * * * *
-*	Concept
+* Concept
 * * * * * * * * */
 .concept {
   width: 100%;
@@ -266,7 +271,7 @@ header {
   background: linear-gradient(#fff 70%, #ededed 30%);
 }
 
-.concept__img {
+.concept__image {
   width: 100%;
   height: 400px;
   -o-object-fit: cover;
@@ -274,7 +279,7 @@ header {
 }
 
 /* * * * * * * * *
-*	Work
+* Work
 * * * * * * * * */
 .work {
   width: 100%;
@@ -339,5 +344,91 @@ header {
 
 .work__content__text {
   letter-spacing: 1.5px;
+}
+
+/* * * * * * * * *
+* Florist
+* * * * * * * * */
+.florist {
+  width: 100%;
+  padding-top: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #ededed), color-stop(40%, #fff));
+  background: linear-gradient(#ededed 60%, #fff 40%);
+}
+
+.florist__persons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.florist__person {
+  width: 300px;
+  padding-bottom: 40px;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 0;
+}
+
+.florist__person__image {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.florist__person__name {
+  font-size: 24px;
+}
+
+.florist__person__introduce {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+
+/* * * * * * * * *
+* Shop information
+* * * * * * * * */
+.shopinformation {
+  width: 100%;
+  padding: 80px 0 120px;
+}
+
+.shopinformation__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shopinformation__image {
+  width: 50%;
+}
+
+.shopinformation__table {
+  width: 45%;
+  border-spacing: 16px;
+  text-align: left;
+  letter-spacing: 1.5px;
+  line-height: 2;
+}
+
+.shopinformation__table__heading {
+  width: 25%;
+  border-right: 1px solid #a0a0a0;
+}
+
+/* * * * * * * * *
+ *	Contact us
+ * * * * * * * * */
+.contactus {
+  widows: 100%;
+  padding: 80px 0;
 }
 /*# sourceMappingURL=main.css.map */
