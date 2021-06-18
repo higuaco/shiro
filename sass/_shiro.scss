@@ -332,8 +332,269 @@ li {
  *	Contact us
  * * * * * * * * */
 
- .contactus {
-   widows: 100%;
-   padding: 80px 0;
-   
- }
+.contactus {
+  widows: 100%;
+  padding: 80px 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../img/contact_us.png");
+  background-size: cover;
+}
+
+.btn__contact {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  padding-left: 40px;
+  height: 80px;
+  line-height: 80px;
+  letter-spacing: 2px;
+  border: 1px solid #a0a0a0;
+  background: #fff;
+  font-size: 20px;
+}
+                     // 手紙アイコン！！
+
+.btn__contact::before,
+.btn__contact::after {
+  content: '';
+  position: absolute;
+  border-radius: 2px;
+}
+.btn__contact::before {
+  top: 30px;
+  left: 85px;
+  width: 30px;
+  height: 20px;
+  border: 1px solid #2b2b2b;
+}
+.btn__contact::after {
+  top: 21px;
+  left: 90px;
+  width: 20px;
+  height: 20px;
+  border-right: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+  transform: rotate(45deg);
+}
+.footer {
+  width: 100%;
+  text-align: center;
+}
+.footer__copyright {
+  line-height: 40px;
+  letter-spacing: 1.4px;
+}
+
+/* * * * * * * * *
+*	レスポンシブ対応
+* * * * * * * * */
+
+@media (max-width: 670px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* * * * * * * * *
+  * utility
+  * * * * * * * * */
+  .u-content-wrapper {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+  .u-heading {
+    font-size: 28px;
+  }
+  .u-text {
+    text-align: left;
+    padding-bottom: 32px;
+  }
+  .u-display__pc {
+    display: none;
+  }
+
+  /* * * * * * * * *
+  * header
+  * * * * * * * * */
+  .header {
+    height: 355px;
+    padding-top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/header.png) 50%;
+    background-size: cover;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  .header__nav__logo {
+    font-size: 24px;
+  }
+  .header__title {
+    padding-top: 120px;
+    font-size: 64px;
+  }
+
+  /* * * * * * * * *
+  * Concept
+  * * * * * * * * */
+  .concept {
+    padding: 40px 0;
+    background: linear-gradient(#fff 75%, #ededed 25%);
+  }
+
+  /* * * * * * * * *
+  * Work
+  * * * * * * * * */
+  .work {
+    position: relative;
+    padding: 40px 0 24px;
+  }
+  .work__contents__wrapper {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+  }
+  .work__contents__wrapper::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 8px;
+  }
+  .work__contents__wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.15);
+    border-radius: 8px;
+  }
+  .work__contents__wrapper::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1);
+    border-radius: 8px;
+  }
+  .work__contents {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  .work__content {
+    width: 80vw;
+    padding-bottom: 40px;
+  }
+  .work__content:not(:last-of-type) {
+    margin-right: 24px;
+  }
+
+  .work::before,
+  .work::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #333;
+  }
+
+  .work::before {
+    bottom: 26px;
+    left: 79%;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+  }
+  .work::after {
+    bottom: 30px;
+    right: 5%;
+    transform: rotate(45deg);
+    transition: .9s ease-in-out;
+  }
+
+  .arrow_display.work::before {
+    width: 60px;
+  }
+  .arrow_display.work::after {
+    width: 10px;
+  }
+
+  .work__content:nth-of-type(2) {
+    margin-top: 0;
+  }
+  .work__content__image {
+    height: 200px;
+    margin-bottom: 0;
+    object-fit: cover;
+  }
+  .work__image__gift {
+    object-position: 0 75%;
+  }
+  .work__image__decoration {
+    object-position: 0 65%;
+  }
+  .work__image__wedding {
+    object-position: 0 60%;
+  }
+
+  /* * * * * * * * *
+  * Florist
+  * * * * * * * * */
+  .florist {
+    padding: 40px 0;
+    background: #ededed 55%;
+  }
+  .florist__persons__wrapper {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+  }
+  .florist__persons__wrapper::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 8px;
+  }
+  .florist__persons__wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.15);
+    border-radius: 8px;
+  }
+  .florist__persons__wrapper::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1);
+    border-radius: 8px;
+  }
+  .florist__persons {
+    display: inline-flex;
+  }
+  .florist__person {
+    width: 80vw;
+  }
+  .florist__person:not(:last-of-type) {
+    margin-right: 24px;
+  }
+  .florist__person__image {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  /* * * * * * * * *
+  * Shop information
+  * * * * * * * * */
+  .shopInformation {
+    padding: 40px 0;
+  }
+  .shopInformation__contents {
+    display: block;
+  }
+  .shopInformation__image,
+  .shopInformation__table {
+    width: 100%;
+  }
+
+  /* * * * * * * * *
+  * Contact us
+  * * * * * * * * */
+  .contactUs {
+    padding: 40px 0 64px;
+  }
+  .btn__contact {
+    width: 280px;
+    padding-left: 50px;
+  }
+  .btn__contact::before {
+    left: 45px;
+  }
+  .btn__contact::after {
+    left: 50px;
+  }
+}
